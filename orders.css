@@ -1,0 +1,38 @@
+/*   Adgala, Rohan Karthik    Account:  jadrn002
+        CS545, Fall 2015
+        Project #4
+*/
+/*Reference: www.W3Schools.com*/
+*{
+	margin: 0;
+	padding:0;
+} 
+html,body{
+	height:100%;		
+	background-color: #F1F2F1 ;	
+
+}
+
+
+.cart tr td, .cart tr th {
+    text-align: left;
+    padding-right: 10px;
+}
+
+tr td:nth-child(odd) {
+       
+    }    
+tr td:nth-child(even) {
+   
+    
+    }   
+
+#orderContent #order_button
+{
+	text-align: center;	
+	margin-left: 0;
+	margin-right: 0;
+	float: center;
+	font-size: 120%;
+	width: 150px;
+}

@@ -1,0 +1,142 @@
+ <!-- 
+//    Adgala, Rohan Karthik    Account:  jadrn002
+//         CS545, Fall 2015
+//         Project #4
+ -->
+<!-- Alan Riggins Lecture Notes -->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Bertha's Deluxe Chocolates</title>
+
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="orders.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+
+    <script type="text/javascript" src="/jquery/jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.10.4.custom.min.js"></script>    
+    
+    <script type="text/javascript" src="ajax_get_lib.js"></script>    
+    <script type="text/javascript" src="products.js"></script>    
+    <script type="text/javascript" src="shopping_cart.js"></script> 
+    <script type="text/javascript" src="orders.js"></script>     
+</head>
+
+<body>
+    <div class="container"> 
+        <div class="header">
+            <div class="banner">               
+                <h1>Bertha's Deluxe Chocolates</h1> 
+                <h3 id="caption">-- Your online Chocolate &amp; Confectionery Store.</h3>
+            </div>  
+            <div class="menubar">           
+                <ul id="menuitems">           
+                  <li ><a href="index.html">Home</a></li>
+                  <li ><a href="products.html">Products</a></li> 
+                  <li ><a href="orders.html">Order Online</a></li>
+                  <li ><a href="about.html">About Us</a></li> 
+                  <li ><a href="contact.html">Contact Us</a></li>                     
+                 
+                  </ul> 
+            </div>    
+            <div class="cartOrder">
+                  <a href="orders.html"><h2 id="titlesCart"><u>Cart Items</u><p id="count"><h1></h1></p></h2></a>
+            </div>              
+        </div>
+        <div id ="orderContent">
+            <h1 class="cartHead"><u>Cart Items</u></h1>
+            <div id="cart"></div>          
+            <div><input type="button" value="Order Now" id="order_button" /></div>
+        </div>
+    
+        <!-- The order form is not visible until the Order Now button is clicked -->
+        <div class="ui-widget">
+        <div id="dialog-modal" class="widget-dialog-container" title="Complete Your Order">
+        <form method="post" action="/perl/jadrn002/proj4/read_cookie.cgi"> 
+
+            <fieldset>
+                <legend>Billing Address</legend>
+                <div>
+                    <label>First Name:</label><input type="text" name="billingFName" id="billingFName" required=required /> 
+                    <label>Last Name:</label> <input type="text" name="billingLName" id="billingLName" required=required />
+                </div>
+                <div>
+                    <label>Address Line 1:</label><input type="text" name="billingAdr1" id="billingAdr1" required=required />
+                </div>
+                <div>
+                    <label>Address Line 2:</label><input type="text" name="billingAdr2" id="billingAdr2" />
+                </div>
+                <div>
+                    <label>City:</label> <input type="text" name="billingCity" id="billingCity" required=required />  
+                    <label>State:</label> <input type="text" name="billingState" id="billingState" maxlength="2" required=required />
+                </div>
+                <div>
+                    <label>Zip Code:</label> <input type="text" name="billingZip" id="billingZip" maxlength="5" required=required />
+                </div>
+                <div>
+                    <label>Phone:</label> <input type="text" name="billingPhone" id="billingPhone" maxlength="10" placeholder="XXX-XXX-XXXX" required=required />
+                </div>
+            </fieldset>
+
+            <input type="checkbox" id="similarAddress" />Check, if the shipping Address is same as your billing address
+
+            <fieldset id="shippingAddress">
+               <legend>Shipping Address</legend>
+                <div>
+                    <label>First Name:</label><input type="text" name="shippingFName" id="shippingFName" required=required /> 
+                    <label>Last Name:</label> <input type="text" name="shippingLName" id="shippingLName" required=required />
+                </div>
+                <div>
+                    <label>Address Line 1:</label><input type="text" name="shippingAdr1" id="shippingAdr1" required=required />
+                </div>
+                <div>
+                    <label>Address Line 2:</label><input type="text" name="shippingAdr2" id="shippingAdr2" />
+                </div>
+                <div>
+                    <label>City:</label> <input type="text" name="shippingCity" id="shippingCity" required=required />  
+                    <label>State:</label> <input type="text" name="shippingState" id="shippingState" maxlength="2" required=required />
+                </div>
+                <div>
+                    <label>Zip Code:</label> <input type="text" name="shippingZip" id="shippingZip" maxlength="5" required=required />
+                </div>
+                <div>
+                    <label>Phone:</label> <input type="text" name="shippingPhone" id="shippingPhone" maxlength="10" placeholder="XXX-XXX-XXXX" required=required />
+                </div>            
+            </fieldset>
+            <fieldset>
+                <legend>Payment Details</legend>
+                <div>
+                    <label>Payment Type:</label>
+                    <select name="payment" id="payment">
+                        <option>Select</option>
+                        <option>Visa</option>
+                        <option>Mastercard</option>
+                        <option>American Express</option>
+                        <option>Discover</option>                        
+                    </select>
+                </div>
+                <div>
+                    <label>Card number:</label><input type="text" maxlength="16" id="cardNO" pattern="[0-9]+" required=required />
+                </div>
+                <div>
+                    <label>Card Expiration: </label><input type="text" maxlength="2" max="12" pattern="[0-9]{2}" name="month" id="month" placeholder="MM" required=required /> / <input type="text" maxlength="2" pattern="[0-9]{2}" name="year" id="year" placeholder="YY" required=required />
+                </div>
+            </fieldset>            
+
+            <div id="buttonContainer">
+                <input type="reset" id="reset" value="Reset" />
+                <input type="submit" id="submit" value="Submit" />
+            </div>
+        </form>       
+        </div> 
+        </div>
+    </div>
+</body>
+</html>

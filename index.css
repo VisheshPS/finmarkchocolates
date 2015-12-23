@@ -1,0 +1,352 @@
+/*   Adgala, Rohan Karthik    Account:  jadrn002
+        CS545, Fall 2015
+        Project #4
+*/
+/*Reference: www.W3Schools.com*/
+*{
+	margin: 0;
+	padding:0;
+} 
+html,body{
+	height:100%;		
+	background-color: #F1F2F1 ;	
+
+}
+#contactBody,#aboutBody
+{
+    overflow: hidden;
+}
+.container{
+	min-height: 95%;    
+    margin: 1% 1% 1% 5%;    
+    position: relative;
+    height: 100%;
+}
+.banner{	
+	padding: 30px 0;
+    margin: 10px;
+    margin-bottom: 2%;    
+    background-color: #D2691E ;
+    color: white;
+    border: 5px solid #D2691E ;
+    border-radius: 5px;  
+}
+h1
+{
+    font-size: 200%;
+	text-align: center;	
+}
+h2{
+   	font-size: 200%;
+   	text-align: center;   	
+   	margin-top: 10px;
+    color:#D2691E;
+}
+#caption{
+	text-align: right;
+	padding-right:  5%;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 150%;
+}
+.clear_it {
+	clear: both;
+} 
+#titles{
+	margin-bottom: 15px;
+    text-align: left;
+    margin-left: -15%;
+    margin-top: 6%;
+    color:#D2691E;
+}
+#titlesCart{
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: 0%;
+    margin-top: 6%;
+    color:#D2691E;
+    display: inline-block;
+}
+
+img{
+	width: 220px;
+	height: 180px;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid black;
+    float: left;
+    text-align: center;
+    display: inline-block;
+}
+.content {
+	margin-top: 5px;    
+    text-align: center; 
+    margin-left: 16%;
+    margin-right: 16%;
+  
+}    
+#content {
+
+    font-size: 120%;
+}
+.content h2{
+	text-align: center;
+}
+.content p{
+    font-size: 150%;
+}
+.menubar{
+    display: inline;
+    margin: 5% 15% 1% 5%;
+    margin-top: 10%;
+}
+#menuitems  {   
+    text-align: left;
+    margin-left: 5%;
+}
+#menuitems li { 
+    display:inline;  
+
+}
+#menuitems a {
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    border: 2px solid #D2691E;
+    color:  #FFFFFF;
+    background-color: #D2691E ;
+    border-radius: 5px;
+    font-size: 200%;
+
+}  
+.orderBtn{
+font-weight: bold;
+    /*border: 2px solid #D2691E;*/
+    color:  #D2691E;
+    /*background-color: #D2691E ;*/
+    margin-left: 2%;
+    font-style: normal;
+}
+
+
+#menuitems a:hover {
+    background-color: #E2B822;
+    color: #000000;
+}
+#menuitems a:active {
+    background-color: #FFFFFF;
+    color:#FFDD00;
+}
+
+span {
+        font-style: italic;
+        font-weight: bold;
+        color: green;
+        display: none;
+        margin-left: 50px;
+        }
+
+p
+{
+    margin-top: 2%;
+    text-align: justify;  
+}
+
+.contactContent{
+
+    margin-top: 5px;    
+    text-align: center; 
+    margin-left: 10%;
+    margin-right: 30%;
+    margin-top: 2%;
+
+
+}
+.aboutContent{
+     margin-top: 5px;    
+    text-align: center; 
+    margin-left: 10%;
+    margin-right: 30%;
+    margin-top: 2%;
+font-size: 150%;
+}
+
+#contactAddress{
+
+font-weight: bold;
+
+}
+
+.aboutTitles{
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: -5%;
+    margin-top: 6%;
+    color:#D2691E;
+}
+#left_column
+{   
+    float: left;
+    text-align: center; 
+    width: 50%;    
+    height: 100%;   
+    color: #D2691E;   
+    display: inline-block;   
+    
+    font-size: 200%; 
+    margin-top: 2%;
+}
+#right_column
+{
+
+    text-align: center;
+    width: 50%;    
+    height: 100%;   
+    color: #D2691E;
+    display: inline-block;
+    float: right;
+    
+    font-size: 200%; 
+    margin-top: 2%;
+    /*display: inline;  */
+}
+
+table{    
+    margin: auto;     
+    padding: 20px; 
+    font-size: 120%;
+    }
+    
+table tr td, table tr th {
+    width: auto;
+    padding: 5px 10px;
+    float: left;
+    text-align: left;
+    }  
+
+tr td:nth-child(odd) {
+    background-color: #F1F2F1;
+    font-weight: bold;    
+    }    
+tr td:nth-child(even) {
+    background-color: #F1F2F1;
+    font-style: italic;
+    
+    }   
+
+.btnContent{
+
+    margin-top: 2%;
+    
+    text-align: center;
+}
+input{
+
+
+    padding: 2px 4px 2px 4px;
+    font-weight: bold;
+    /*border: 2px solid #4E2E28;*/
+    color:  #D2691E;
+    /*background-color: #4E2E28 ;*/
+    border-radius: 5px;
+    font-size: 130%;
+    font-style: italic;
+    margin-right: 5px;
+    margin-left: 5px;
+    
+}
+
+#count {
+   font-size: 120%;
+   color: #000000; 
+   text-align: left !important
+}
+
+
+    
+#orderContent
+{
+    margin-left: 10%;
+    float: left;
+}
+
+
+.cartOrder {
+    padding:30px;
+    width:350px;
+    display:inline-block;
+    float:right;
+    text-align:right;
+    color:#000000;
+   
+}
+.cartOrder a{
+    color: #000000;
+}
+.cartHead{
+    text-align: left;
+    margin-left: 6%;
+    margin-top: 2%;
+}
+
+#sitescontent {
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    }    
+#sitescontent table {
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;          
+    }
+#sitescontent th {
+    color: white;
+    background-color: #D2691E;
+    border: 1px solid #D2691E;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 150%;
+     width: 200px;
+    }    
+#sitescontent td {
+    border: 1px solid #D2691E; 
+    padding: 5px 10px;
+    font-size: 150%;
+    width: 200px;
+    }    
+#sitescontent tr td:nth-child(odd) {
+    background-color: #F1F2F1;
+    font-weight: bold;    
+    float: left;
+    }    
+#sitescontent tr td:nth-child(even) {
+    background-color: #F1F2F1;
+    font-style: italic;    
+    float: left;
+    }      
+#sitescontent h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.cart table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    } 
+    
+.cart{
+    font-size: 150%;
+    margin-top: 3%
+    
+}   
+/*#order_button
+{
+    text-align: center; 
+    
+    font-size: 150%;
+    width: 300px;
+    height: auto;
+    color: #FFF;
+    background-color: #D2691E;
+}*/
